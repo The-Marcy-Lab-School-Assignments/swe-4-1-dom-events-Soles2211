@@ -1,10 +1,15 @@
-let display = document.getElementById('counter');
-const button = document.querySelector("#increment");
-const button2 = document.querySelector("reset");
+const display = document.querySelector("#counter");
+const increment = document.querySelector("#increment");
+const reset = document.querySelector("#reset");
 
-let count = 0; 
+let count = 0;
 
-button.addEventListener('DOMContentLoaded', () => {
-    count++;
-    document.getElementById('counter').textContent = count;
+increment.addEventListener("click", () => {
+  count += 1;
+  display.textContent = count;
+});
+
+reset.addEventListener("click", () => {
+  count = 0;
+  display.textContent = count;
 });
